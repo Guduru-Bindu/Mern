@@ -1,0 +1,17 @@
+
+
+services:
+  server:
+    build: ./server
+    container_name: server 
+    ports:
+      - "3001:3001"
+    environment: 
+    - mongodb+srv://binduguduru73:bindu2468@cluster0.ygfafja.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+  client:
+    build: ./client
+    container_name: client
+    ports :
+    - "3000:80"
+
+
